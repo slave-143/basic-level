@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="headerText">Weather Forecast</div>
+    </header>
+
+    <div id="myModal" class="modal">
+        <br>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>City could not be found.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3" id="allCities">
+                <br>
+                <form class="form">
+                    <div class="row" id="format-row">
+                        <input type="textbox" id="searchCity" name="searchCity" value="Search City">
+                        <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+                <ul class=search-History></ul>
+            </div>
+            <div class="col-9" id="weather">
+                <br>
+                <div class="dailyOverview">
+                    <div class="city"></div>
+                    <div class="temperature"></div>
+                    <div class="humidity"></div>
+                    <div class="windSpeed"></div>
+                    <div class="uvIndex"></div>
+                </div>
+                <br>
+                <br>
+                <h5><b>5-Day Forecast:</b></h5>
+                <div id="map"></div>
+                <div id="forecast">
+                    <div class="card" id="forecast-1"></div>
+                    <div class="card" id="forecast-2"></div>
+                    <div class="card" id="forecast-3"></div>
+                    <div class="card" id="forecast-4"></div>
+                    <div class="card" id="forecast-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maps.alk.com/api/1.2/alkmaps.js'></script>
+    <script src='script.js'></script>
+</body>
+</html>
